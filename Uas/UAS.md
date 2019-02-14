@@ -21,7 +21,9 @@
 -keterkaitan antara controller dan basic objek yaitu controller membangun di atas basic objeck.  
 
 3.
--Secara default, kubernetes tidak memiliki dashboard akan tetapi kita dapat melakukan setup untuk kubernetes dashboard. Yang pertama kali dilakukan adalah 
+-Secara default, kubernetes tidak memiliki dashboard akan tetapi kita dapat melakukan setup untuk kubernetes dashboard. Yang pertama 
+
+kali dilakukan adalah 
 
  kita akan membuat sebuah file yaitu admin.yaml lalu isikan dengan source berikut.
  
@@ -53,9 +55,13 @@ Lalu jalankan dashboard tersebut dengan perintah
 kubectl apply -f dashboard.yaml
 
 Hasilnya:
+
 NAMESPACE     NAME                   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)         AGE
+
 default       kubernetes             ClusterIP   10.96.0.1       <none>        443/TCP         31m
+ 
 kube-system   kube-dns               ClusterIP   10.96.0.10      <none>        53/UDP,53/TCP   31m
+ 
 kube-system   kubernetes-dashboard   NodePort    10.101.10.168   <none>        443:31601/TCP   2m
  
 Dari konfigurasi diatas, dapat dilihat bahwa kubernetes dashboard jalan pada port 31601, lalu silahkan akses kubernetes dashboard
